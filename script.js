@@ -27,48 +27,9 @@ for (let i = 0; i < 2; i++) {
     console.log("It works");
     appData.expenses[q1] = q2;
   } else {
-    i = 0;
+    i--;
   }
 }
-
-/*let i = 0;
- while (i < 2) {
-  const q1 = prompt("Введите обязательную статью расходов в этом месяце"),
-    q2 = prompt("Во сколько обойдется?");
-  if (
-    typeof q1 === "string" &&
-    typeof q1 != null &&
-    typeof q2 != null &&
-    q1 != "" &&
-    q2 != "" &&
-    q1.length < 50
-  ) {
-    console.log("It works");
-    appData.expenses[q1] = q2;
-  } else {
-    i = 0;
-  }
-  i++;
-} */
-
-/* do {
-  const q1 = prompt("Введите обязательную статью расходов в этом месяце"),
-    q2 = prompt("Во сколько обойдется?");
-  if (
-    typeof q1 === "string" &&
-    typeof q1 != null &&
-    typeof q2 != null &&
-    q1 != "" &&
-    q2 != "" &&
-    q1.length < 50
-  ) {
-    console.log("It works");
-    appData.expenses[q1] = q2;
-  } else {
-    i = 0;
-  }
-  i++;
-} while (i < 2); */
 
 appData.moneyPerDay = appData.budget / 30;
 
