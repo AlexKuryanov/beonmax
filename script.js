@@ -2,17 +2,23 @@
 
 const money = prompt("Ваш бюджет на месяц?");
 const time = prompt("Введите дату в формате YYYY-MM-DD");
-const question1 = prompt("Введите обязательную статью расходов в этом месяце");
-const question2 = prompt("Во сколько обойдется?");
 
 const appData = {
   budget: money,
   timeData: time,
-  expenses: {
-    question1: question2,
-  },
+  expenses: {},
   optionalExpenses: {},
   income: [],
   savings: false,
 };
-alert(`Ваш дневной бюджет: ${money / 30}`);
+
+// q = question
+const q1 = prompt("Введите обязательную статью расходов в этом месяце");
+const q2 = prompt("Во сколько обойдется?");
+const q3 = prompt("Введите обязательную статью расходов в этом месяце");
+const q4 = prompt("Во сколько обойдется?");
+
+appData.expenses.q1 = q3;
+appData.expenses.q2 = q4;
+
+alert(appData.budget / 30);
