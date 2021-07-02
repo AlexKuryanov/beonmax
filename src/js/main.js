@@ -22,9 +22,11 @@ const timeInputs = timeData.querySelectorAll('input');
 	dayBudgetValue = document.getElementsByClassName('daybudget-value')[0],
 	levelValue = document.getElementsByClassName('level-value')[0],
 	expensesValue = document.getElementsByClassName('expenses-value')[0],
-	optionalExpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
+	optionalExpensesValue = 
+    document.getElementsByClassName('optionalexpenses-value')[0],
 	incomeValue = document.getElementsByClassName('income-value')[0],
-    monthSavingsValue = document.getElementsByClassName('monthsavings-value')[0],
+    monthSavingsValue = 
+      document.getElementsByClassName('monthsavings-value')[0],
     yearSavingsValue = document.getElementsByClassName('yearsavings-value')[0],
 
 
@@ -116,7 +118,8 @@ const appData = {
   chooseIncome: function () {
     let items;
     while (items == "" || items == null || !isNaN(items)) {
-      items = prompt("Что принесет дополнительный доход? (Перечислите через запятую)", "");
+      items =
+        prompt("Есть дополнительный доход? (Перечислите через запятую)", "");
     }
 
     if (
