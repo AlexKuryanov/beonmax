@@ -1,20 +1,26 @@
 "use strict";
 
-const startBtn = document.getElementById('start');
-const resultTable = document.querySelector('.result-table');
-const values = resultTable.querySelectorAll('[class$=value]');
-const data = document.querySelector('.data');
-const expensesItem = data.getElementsByClassName('expenses-item');
-const confirmExpensesBtn = data.getElementsByTagName('button')[0];
-const confirmOptionalExpensesBtn = data.getElementsByTagName('button')[1];
-const calcBtn = data.getElementsByTagName('button')[2];
-const optionalExpensesItem = data.querySelectorAll('.optionalexpenses-item');
-const chooseIncome = data.querySelector('#income');
-const savings = data.querySelector('#savings');
-const savingsSum = data.querySelector('#sum');
-const choosePercent = data.querySelector('#percent');
-const timeData = document.querySelector('.time-data');
-const timeInputs = timeData.querySelectorAll('input');
+const startBtn = document.getElementById('start'),
+  budgetValue = document.getElementsByClassName('budget-value')[0],
+  dayBudgetValue = document.getElementsByClassName('daybudget-value')[0],
+  levelValue = document.getElementsByClassName('level-value')[0],
+  expensesValue = document.getElementsByClassName('expenses-value')[0],
+  optionalexpensesValue = document.getElementsByClassName('optionalexpenses-value')[0],
+  incomeValue = document.getElementsByClassName('income-value')[0],
+  monthsavingsValue = document.getElementsByClassName('monthsavings-value')[0],
+  yearsavingsValue = document.getElementsByClassName('yearsavings-value')[0];
+
+const expensesItems = document.getElementsByClassName('expenses-item'),
+  expensesBtn = document.getElementsByTagName('button')[0],
+  optionalExpensesBtn = document.getElementsByTagName('button')[1],
+  optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
+  incomeItem = document.querySelector('.choose-income'),
+  checkSavings = document.querySelector('#savings'),
+  savingsSum = document.querySelector('.choose-sum'),
+  percentValue = document.querySelector('.choose-percent'),
+  yearValue = document.querySelector('.year-value'),
+  monthValue = document.querySelector('.month-value'),
+  dayValue = document.querySelector('.day-value');
 
 //trainer's code
 /* let startBtn = document.getElementById("start"),
