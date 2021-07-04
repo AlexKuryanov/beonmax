@@ -28,6 +28,9 @@ const expensesItems = document.getElementsByClassName('expenses-item'),
   dayValue = document.querySelector('.day-value');
 
 let money, time;
+expensesBtn.disabled = true;
+optionalExpensesBtn.disabled = true;
+calcBtn.disabled = true;
 
 startBtn.addEventListener('click', function () {
   buttons.forEach((button) => {
