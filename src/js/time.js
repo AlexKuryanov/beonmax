@@ -24,8 +24,12 @@ function myAnimation() {
 
   function frame() {
     if (pos == 300) {
+      btn.disabled = false;
+      btn.style.cursor = 'pointer';
       clearTimeout(timer);
     } else {
+      btn.disabled = true;
+      btn.style.cursor = 'default';
       pos++;
       box.style.top = pos + 'px';
       box.style.left = pos + 'px';
