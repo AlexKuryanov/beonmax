@@ -1,0 +1,41 @@
+.container {
+  width: 350px;
+  height: 350px;
+  border: 2px solid fuchsia;
+  background-color: seashell;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.box {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: royalblue;
+}
+
+.btn {
+  color: goldenrod;
+  background-color: blue;
+}
+
+.btn-block {
+  height: 50px;
+  background-color: chocolate;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.button {
+  display: block;
+  width: 50px;
+  height: 25px;
+  vertical-align: middle;
+  background-color: greenyellow;
+  border: none;
+  outline: none;
+}
