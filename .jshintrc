@@ -4,7 +4,7 @@
   "undef": true,
   "maxlen": 80,
   "curly": true,
-  "strict": "global",
+  "strict": true,
   "browser": true,
   "devel": true,
   "jquery": true,
