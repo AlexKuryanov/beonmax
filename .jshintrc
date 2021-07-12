@@ -3,7 +3,7 @@
   "indent": 2,
   "undef": true,
   "maxlen": 80,
-  "trailingcomma": true,
+  "trailingcomma": false,
   "curly": true,
   "strict": "global",
   "browser": true,
