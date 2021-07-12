@@ -2,12 +2,12 @@ window.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   // Tabs
-  var tab = document.querySelectorAll('.info-header-tab'),
+  const tab = document.querySelectorAll('.info-header-tab'),
     info = document.querySelector('.info-header'),
     tabContent = document.querySelectorAll('.info-tabcontent');
 
   function hideTabContent(a) {
-    for (var i = a; i < tabContent.length; i++) {
+    for (let i = a; i < tabContent.length; i++) {
       tabContent[i].classList.remove('show');
       tabContent[i].classList.add('hide');
       tab[i].classList.remove('active');
@@ -24,9 +24,9 @@ window.addEventListener('DOMContentLoaded', function () {
   }
 
   info.addEventListener('click', function (event) {
-    var target = event.target;
+    const target = event.target;
     if (target && target.classList.contains('info-header-tab')) {
-      for (var i = 0; i < tab.length; i++) {
+      for (let i = 0; i < tab.length; i++) {
         if (target == tab[i]) {
           tab[i].classList.add('active');
           hideTabContent(0);
