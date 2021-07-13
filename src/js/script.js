@@ -1,6 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-  'use strict';
-
+  
   // Tabs
   const tab = document.querySelectorAll('.info-header-tab'),
     info = document.querySelector('.info-header'),
