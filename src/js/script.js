@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   //Form
-
+  //TODO: check why request 'POST' doesn't work
   let message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с Вами свяжемся!',
@@ -134,26 +134,66 @@ window.addEventListener('DOMContentLoaded', function () {
 
   let form = document.querySelector('.main-form'),
     input = form.getElementsByTagName('input'),
-    statusMessage = document.createElement('div');
-
+    statusMessage = document.createElement('div'),
+    contactForm = document.querySelector('#form'),
+    contactInput = contactForm.getElementsByTagName('input');
+  
     statusMessage.classList.add('status');
 
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-      form.appendChild(statusMessage);
+     form.addEventListener('submit', function(event) {
+       event.preventDefault();
+       form.appendChild(statusMessage);
+      
+       let request = new XMLHttpRequest();
+       request.open('POST', 'server.php');
+       request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
 
+       let formData = new FormData(form);
+      
+       let obj = {};
+       formData.forEach(function(value, key) {
+         obj[key] = value;
+       });
+       let json = JSON.stringify(obj);
+       request.send(json);
+       console.log(json);
+
+       request.addEventListener('readystatechange', function(){
+         if (request.readyState < 4) {
+           statusMessage.innerHTML = message.loading;
+         } else if (request.readyState === 4 && request.status === 200){
+           statusMessage.innerHTML = message.success;
+         } else {
+           statusMessage.innerHTML = message.failure;
+         }
+       });
+       // Reset input value
+       for (let i = 0; i < input.length; i++) {
+         input[i].value = '';        
+       }
+    });
+
+    contactForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      contactForm.appendChild(statusMessage);
+      
       let request = new XMLHttpRequest();
       request.open('POST', 'server.php');
       request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-
-      let formData = new FormData(form);
-
-      let obj = {};
-      formData.forEach(function(value, key) {
-        obj[key] = value;
+      console.log(contactForm);
+      let formData2 = new FormData(contactForm);
+      console.log(formData2);
+      let obj2 = {};
+      
+      
+      formData2.forEach(function(value, key) {        
+        obj2[key] = value;
+        console.log(obj2[key]);
       });
-      let json = JSON.stringify(obj);
+      
+      let json = JSON.stringify(obj2);      
       request.send(json);
+      console.log(json);
 
       request.addEventListener('readystatechange', function(){
         if (request.readyState < 4) {
@@ -164,11 +204,11 @@ window.addEventListener('DOMContentLoaded', function () {
           statusMessage.innerHTML = message.failure;
         }
       });
-
-      for (let i = 0; i < input.length; i++) {
-        input[i].value = '';
-        
+      // Reset input value
+      for (let i = 0; i < contactInput.length; i++) {
+        contactInput[i].value = '';        
       }
     });
+
 
 });
