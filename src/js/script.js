@@ -125,7 +125,6 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   //Form
-  //TODO: check why request 'POST' doesn't work
   let message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с Вами свяжемся!',
@@ -156,7 +155,6 @@ window.addEventListener('DOMContentLoaded', function () {
        });
        let json = JSON.stringify(obj);
        request.send(json);
-       console.log(json);
 
        request.addEventListener('readystatechange', function(){
          if (request.readyState < 4) {
@@ -180,9 +178,8 @@ window.addEventListener('DOMContentLoaded', function () {
       let request = new XMLHttpRequest();
       request.open('POST', 'server.php');
       request.setRequestHeader('Content-type', 'application/json; charset=utf-8');
-      console.log(contactForm);
+      
       let formData2 = new FormData(contactForm);
-      console.log(formData2);
       let obj2 = {};
       
       
@@ -193,7 +190,6 @@ window.addEventListener('DOMContentLoaded', function () {
       
       let json = JSON.stringify(obj2);      
       request.send(json);
-      console.log(json);
 
       request.addEventListener('readystatechange', function(){
         if (request.readyState < 4) {
@@ -209,6 +205,4 @@ window.addEventListener('DOMContentLoaded', function () {
         contactInput[i].value = '';        
       }
     });
-
-
 });
