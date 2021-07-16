@@ -122,6 +122,7 @@ window.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < descrBtn.length; i++) {
       descrBtn[i].classList.remove('more-splash');
     }
+    statusMessage.textContent = '';
   });
 
   //Form  
@@ -178,10 +179,12 @@ window.addEventListener('DOMContentLoaded', function () {
           .then(() => statusMessage.innerHTML = message.success)
           .catch(() => statusMessage.innerHTML = message.failure)
           .then(clearInput)
+
       
       });
     }
 
     sendForm(form);
     sendForm(contactForm);
+    
 });
