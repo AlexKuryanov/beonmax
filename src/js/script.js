@@ -252,7 +252,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
       totalValue.innerHTML = 0;
 
-      persons.addEventListener('change', function() {
+      persons.addEventListener('input', function() {
         personsCount = +this.value;
 
         total = daysCount * (personsCount * 5000);
@@ -265,7 +265,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
       });
 
-      days.addEventListener('change', function() {
+      days.addEventListener('input', function() {
         daysCount = +this.value;
 
         total = daysCount * (personsCount * 5000);
