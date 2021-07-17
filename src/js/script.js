@@ -257,7 +257,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         total = daysCount * (personsCount * 5000);
 
-        if (days.value == '') {
+        if (days.value == '' || persons.value == '') {
           totalValue.innerHTML = 0;
         } else {
           totalValue.innerHTML = total;
@@ -270,7 +270,7 @@ window.addEventListener('DOMContentLoaded', function () {
 
         total = daysCount * (personsCount * 5000);
 
-        if (persons.value == '') {
+        if (days.value == '' || persons.value == '') {
           totalValue.innerHTML = 0;
         } else {
           totalValue.innerHTML = total;
