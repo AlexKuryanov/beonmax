@@ -260,7 +260,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (days.value == '' || persons.value == '') {
           totalValue.innerHTML = 0;
         } else {
-          totalValue.innerHTML = total;
+          totalValue.innerHTML = total * place.options[place.selectedIndex].value;
         }
 
       });
@@ -273,7 +273,7 @@ window.addEventListener('DOMContentLoaded', function () {
         if (days.value == '' || persons.value == '') {
           totalValue.innerHTML = 0;
         } else {
-          totalValue.innerHTML = total;
+          totalValue.innerHTML = total * place.options[place.selectedIndex].value;
         }
 
       });
