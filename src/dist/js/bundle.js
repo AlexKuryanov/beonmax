@@ -18,7 +18,7 @@ function calc() {
 
       totalValue.innerHTML = 0;
 
-      persons.addEventListener('input', function() {
+      persons.addEventListener('change', function() {
         personsCount = +this.value;
 
         total = daysCount * (personsCount * 5000);
@@ -31,7 +31,7 @@ function calc() {
 
       });
 
-      days.addEventListener('input', function() {
+      days.addEventListener('change', function() {
         daysCount = +this.value;
 
         total = daysCount * (personsCount * 5000);
