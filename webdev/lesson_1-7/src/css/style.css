@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(255, 255, 224);
+  font-size: 10pt;
+}
+
+.main-title {
+  font-size: 12pt;
+  text-align: center;
+  color: rgb(204,0,0);
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-size: 10pt;
+  font-weight: normal;
+}
+
+.chapter {
+  font-size: 12pt;
+  text-align: center;
+  color: rgb(204,0,0);
+}
+
+.italic {
+  font-style: italic;
+}
