@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+.wrap {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 2px solid blue;
+  margin-top: 30px;
+}
+
+.form {
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.form-title {
+  text-align: center;
+}
+
+.form-input {
+  display: block;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.form-checkbox {
+  margin-bottom: 15px;
+}
+
+button {
+  display: block;
+  padding: 10px 30px;
+  margin: 0 auto;
+  background-color: lightseagreen;
+}
+
+.change {
+  margin-top: 15px;
+}
