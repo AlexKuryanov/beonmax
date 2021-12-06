@@ -23,7 +23,7 @@ let inputRub = document.getElementById('rub'),
     getData()
       .then(response => {
         console.log(response);
-        let data = JSON.parse(response);        
+        let data = JSON.parse(response);
         inputUsd.value = (inputRub.value / data.usd).toFixed(2);
       })
       .catch(() => inputUsd.value = "Something goes wrong!")
@@ -53,3 +53,10 @@ let inputRub = document.getElementById('rub'),
 //     }
 //   })
 // })
+var date = new Date();
+var date1 = Date.UTC(date);
+var date2 = new Date(date1);
+alert(date2.toUTCString());
+//2 пример
+var newDate = new Date(Date.UTC(date));
+alert(newDate.toUTCString());
