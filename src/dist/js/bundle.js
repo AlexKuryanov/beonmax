@@ -289,7 +289,7 @@ module.exports = tabs;
 /***/ ((module) => {
 
 function timer() {
-  var deadline = '2021-08-07T11:59';
+  var deadline = '2021-12-11T11:59';
 
   function getTimeRemaining(endtime) {
     if (Date.parse(endtime) < Date.parse(new Date())) {
