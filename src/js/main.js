@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', function () {
-  
+
   // Tabs
   const tab = document.querySelectorAll('.info-header-tab'),
     info = document.querySelector('.info-header'),
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', function () {
   });
 
   //Timer
-  let deadline = '2021-08-07T11:59';
+  let deadline = '2021-12-11T11:59';
 
   function getTimeRemaining(endtime) {
 
@@ -125,7 +125,7 @@ window.addEventListener('DOMContentLoaded', function () {
     statusMessage.textContent = '';
   });
 
-  //Form  
+  //Form
   let message = {
     loading: 'Загрузка...',
     success: 'Спасибо! Скоро мы с Вами свяжемся!',
@@ -135,7 +135,7 @@ window.addEventListener('DOMContentLoaded', function () {
   let form = document.querySelector('.main-form'),
     input = document.getElementsByTagName('input'),
     statusMessage = document.createElement('div'),
-    contactForm = document.querySelector('#form');  
+    contactForm = document.querySelector('#form');
     statusMessage.classList.add('status');
 
     function sendForm(elem) {
@@ -160,8 +160,8 @@ window.addEventListener('DOMContentLoaded', function () {
                       resolve();
                     } else {
                       reject();
-                    }                   
-                  } 
+                    }
+                  }
                 }
                 request.send(data);
           })
@@ -170,7 +170,7 @@ window.addEventListener('DOMContentLoaded', function () {
         // Reset input value
         function clearInput(){
           for (let i = 0; i < input.length; i++) {
-          input[i].value = '';        
+          input[i].value = '';
           }
         }
 
@@ -180,7 +180,7 @@ window.addEventListener('DOMContentLoaded', function () {
           .catch(() => statusMessage.innerHTML = message.failure)
           .then(clearInput)
 
-      
+
       });
     }
 
@@ -206,7 +206,7 @@ window.addEventListener('DOMContentLoaded', function () {
       if (n < 1) {
         slideIndex = slides.length;
       }
-      // Hide all slides and remove from dots class active 
+      // Hide all slides and remove from dots class active
       slides.forEach(item => item.style.display = 'none');
       dots.forEach(item => item.classList.remove('dot-active'));
 
